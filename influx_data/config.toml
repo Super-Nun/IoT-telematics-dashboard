@@ -1,0 +1,7 @@
+bolt-path = "/var/lib/influxdb/influxd.bolt"
+engine-path = "/var/lib/influxdb/engine"
+[http]
+  bind-address = "0.0.0.0:8086"
+  enabled = true
+  access-control-allow-origin = "*"
+  cors-enabled = true
