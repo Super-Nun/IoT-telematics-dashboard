@@ -1,0 +1,44 @@
+Atrack TPMS Note
+
+# To Enable TPMS in AK7V
+AT$BCST=1,,1,"01D0DC","01D0F5","01CF64","01CFDC"
+(Replace 01D0DC with sensor ID) (Need to be 6 char, if id is only 5 char add 0 in the front)
+
+# Add %TM in AT$FORM to send tpms data to server
+AT$FORM=0,@P,0,"%TM"
+
+# Example Report
+D0DC8000
+First 4 char is sensor id
+Latter 4 char is temp and pressure data
+the first two char of the data part is temp (80)
+the last twot char of the data part is pressure (00)
+
+Use the following equation to get temp&pressure data
+
+[Pressure]
+Point Sample
+ACTUAL=>PSI
+86=>31.1
+84=>30.4
+86=>31.1
+79=>28.6
+0=>0
+
+Equation
+y=0.3625x+0
+
+[Temp]
+Point Sample
+ACTUAL=>Celsius
+155=>41
+154=>38
+153=>35
+152=>32
+
+Equation
+y=3x-424
+
+# Example Report with 4 sensor
+D0DC8000D0F58000CF648000CFDC8000
+All sensor data will be next to each other with out delimiter

@@ -1,0 +1,25 @@
+{
+  "name": "atrack-poc",
+  "version": "0.0.1",
+  "description": "atrack gps tracker poc ",
+  "main": "main.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "start": "node main.js"
+  },
+  "keywords": [
+    "atrack"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@influxdata/influxdb-client": "^1.35.0",
+    "dotenv": "^16.6.1",
+    "minio": "^7.1.3"
+  },
+  "devDependencies": {
+    "chai": "^4.4.1",
+    "mocha": "^10.4.0"
+  }
+}

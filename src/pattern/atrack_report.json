@@ -1,0 +1,383 @@
+{
+    "LNG": {
+        "name": "lng",
+        "description": "Longitude",
+        "dbtype": "float",
+        "decimals": 6
+    },
+    "LAT": {
+        "name": "lat",
+        "description": "Latitude",
+        "dbtype": "float",
+        "decimals": 6
+    },
+    "Heading": {
+        "name": "gps_heading",
+        "description": "GPS Heading (°)",
+        "dbtype": "int"
+    },
+    "Odometer": {
+        "name": "gps_odometer",
+        "description": "The distance travled by a vehicle (km)",
+        "dbtype": "float",
+        "decimals": 1
+    },
+    "HDOP": {
+        "name": "gps_hdop",
+        "description": "Horizontal Dilution of Precision (Accuracy)",
+        "dbtype": "float",
+        "decimals": 1
+    },
+    "InputStatus": {
+        "name": "input_status",
+        "description": "Decimal string represents a binary number, where each bit represents the status of each input. The Least Significant Bit represents input 0.",
+        "dbtype": "U8",
+        "tables": {
+            "0": {
+                "name": "input_status_1",
+                "description": "",
+                "dbtype": "boolean"
+            },
+            "1": {
+                "name": "input_status_2",
+                "description": "",
+                "dbtype": "boolean"
+            },
+            "2": {
+                "name": "input_status_3",
+                "description": "",
+                "dbtype": "boolean"
+            },
+            "3": {
+                "name": "input_status_4",
+                "description": "",
+                "dbtype": "boolean"
+            },
+            "4": {
+                "name": "input_status_5",
+                "description": "",
+                "dbtype": "boolean"
+            },
+            "5": {
+                "name": "input_status_6",
+                "description": "",
+                "dbtype": "boolean"
+            },
+            "6": {
+                "name": "input_status_7",
+                "description": "",
+                "dbtype": "boolean"
+            },
+            "7": {
+                "name": "input_status_8",
+                "description": "",
+                "dbtype": "boolean"
+            }
+        }
+    },
+    "Speed": {
+        "name": "gps_speed",
+        "description": "GPS Vehicle Speed (km/h)",
+        "dbtype": "int"
+    },
+    "AT": {
+        "name": "gps_altitude",
+        "description": "GPS Altitude",
+        "dbtype": "int"
+    },
+    "BV": {
+        "name": "battery_backup_voltage",
+        "description": "Backup Battery Voltage (V)",
+        "dbtype": "float",
+        "decimals": 1
+    },
+    "GQ": {
+        "name": "gsm_signal_quality",
+        "description": "GSM Signal Quality",
+        "dbtype": "int"    
+    },
+    "GS": {
+        "name": "gsm_signal_status",
+        "description": "GSM Signal Status",
+        "dbtype": "string",
+        "dict": {
+            "0": "gsm_off",
+            "1": "gsm_on",
+            "2": "gsm_ini",
+            "3": "gsm_ready",
+            "4": "gprs_disconnecting",
+            "5": "gprs_deactivated",
+            "6": "gprs_connecting",
+            "7": "gprs_activated",
+            "8": "gprs_host_connecting",
+            "9": "gprs_host_connected",
+            "10": "gprs_fota_connecting",
+            "11": "gprs_fota_connected",
+            "12": "gprs_fota_timeout",
+            "13": "gprs_fota_check"
+        }
+    },
+    "GV": {
+        "name": "g_force",
+        "description": "Maximum G-Force value for harsh event reports, and current G-Force value for tracking reports",
+        "dbtype": "g_force"
+    },
+    "MV" : {
+        "name": "battery_main_voltage",
+        "description": "Main Battery Voltage (V)",
+        "dbtype": "float",
+        "decimals": 1
+    },
+    "EL": {
+        "name": "engine_percent_load",
+        "description": "Engine Load (%)",
+        "dbtype": "int"
+    },
+    "ET": {
+        "name": "engine_coolant_temp",
+        "description": "Engine Coolant Temperature (%)",
+        "dbtype": "int"
+    },
+    "FC": {
+        "name": "fuel_used",
+        "description": "Fuel Used (L)",
+        "dbtype": "float",
+        "decimals": 1
+    },
+    "FL": {
+        "name": "fuel_level",
+        "description": "Fuel Level (%)",
+        "dbtype": "int"
+    },
+    "IA": {
+        "name": "intake_air_temp",
+        "description": "Intake air temperature (°C)",
+        "dbtype": "int"
+    },
+    "MF": {
+        "name": "mass_air_flow_rate",
+        "description": "Mass air flow rate (g/s)",
+        "dbtype": "float",
+        "decimals": 2
+    },
+    "ML": {
+        "name": "malfunction_lamp",
+        "description": "MIL (Malfunction Indicator Lamp) Lamp Status",
+        "dbtype": "boolean"
+    },
+    "MP": {
+        "name": "manifold_abs_pressure",
+        "description": "Manifold Absolute Pressure (?)",
+        "dbtype": "int"
+    },
+    "RP": {
+        "name": "max_rpm",
+        "description": "Maximum engine RPM reading between two report (rpm)",
+        "dbtype": "int"
+    },
+    "TR": {
+        "name": "max_throttle_pos",
+        "description": "Maximum throttle position (%) between two report",
+        "dbtype": "int"
+    },
+    "TM": {
+        "name": "tpms",
+        "description": "TPMS",
+        "dbtype": "tpms",
+        "pressure_slope": 0.3625,
+        "pressure_const": 0,
+        "temp_slope": 3,
+        "temp_const": -424
+    },
+    "JO4": {
+        "name": "JO4",
+        "description": "Collection of Engine Percent Load",
+        "dbtype": "U8",
+        "tables": {
+            "0~7": {
+                "name": "engine_percent_load",
+                "description": "Engine Percent Load At Current Speed (%)",
+                "dbtype": "int"
+            }
+        }
+    },
+    "JO5": {
+        "name": "JO5",
+        "description": "Collection of Fuel Level",
+        "dbtype": "U8",
+        "tables": {
+            "0~7": {
+                "name": "fuel_level",
+                "description": "Fuel Level (%)",
+                "dbtype": "float",
+                "decimals": 1,
+                "multiplier": 4
+            }
+        }
+    },
+    "JO10": {
+        "name": "JO10",
+        "description": "Collection of System events, Handling information, Tachograph performance and Direction indicator",
+        "dbtype": "U8",
+        "tables": {
+            "6~7": {
+                "name": "direction_indicator",
+                "description": "Direction Indicator",
+                "dbtype": "string",
+                "dict": {
+                    "0": "forward",
+                    "1": "reverse"
+                }
+            }
+        }
+    },
+    "JO11": {
+        "name": "JO11",
+        "description": "Collection of Engine Coolant Temperature",
+        "dbtype": "U8",
+        "tables": {
+            "0~7": {
+                "name": "engine_coolant_temp",
+                "description": "Engine Coolant Temperature (°C)",
+                "dbtype": "int",
+                "offset": -40
+            }
+        }
+    },
+    "JH2": {
+        "name": "engine_speed",
+        "description": "Engine Speed (RPM)",
+        "dbtype": "float",
+        "decimals": 3,
+        "multiplier": 125
+    },
+    "JH8": {
+        "name": "service_distance",
+        "description": "Service distance (km)",
+        "dbtype": "int",
+        "multiplier": 5,
+        "offset": -160635
+    },
+    "JH10": {
+        "name": "ambient_air_temp",
+        "description": "Ambiant Air Temperature (°C)",
+        "dbtype": "float",
+        "decimals": 5,
+        "multiplier": 3125,
+        "offset": -273
+    },
+    "JH11": {
+        "name": "fuel_rate",
+        "description": "Fuel Rate (L/h)",
+        "dbtype": "float",
+        "decimals": 2,
+        "multiplier": 5
+    },
+    "JL1": {
+        "name": "fuel_used",
+        "description": "Engine total fuel used (L)",
+        "dbtype": "float",
+        "decimals": 1,
+        "multiplier": 5
+    },
+    "JL2": {
+        "name": "engine_operate_hrs",
+        "description": "Engine total hours of operation",
+        "dbtype": "float",
+        "decimals": 2,
+        "multiplier": 5
+    },
+    "JL3": {
+        "name": "distance_traveled",
+        "description": "Total vehicle distance (km)",
+        "dbtype": "float"
+    },
+    "ZO6": {
+        "name": "road_speed",
+        "description": "Road Speed (km/h)",
+        "dbtype": "float",
+        "decimals": 3,
+        "multiplier": 805
+    },
+    "ZO9": {
+        "name": "engine_percent_load",
+        "description": "Percent Engine Load (%)",
+        "dbtype": "float",
+        "decimals": 1,
+        "multiplier": 5
+    },
+    "ZO10": {
+        "name": "fuel_level",
+        "description": "Fuel Level (%)",
+        "dbtype": "float",
+        "decimals": 1,
+        "multiplier": 5
+    },
+    "ZO11": {
+        "name": "engine_oil_pressure",
+        "description": "Engine oil pressure (kPa)",
+        "dbtype": "float",
+        "decimals": 2,
+        "multiplier": 345
+    },
+    "ZO12": {
+        "name": "boost_pressure",
+        "description": "Boost Pressure (kPa)",
+        "dbtype": "float",
+        "decimals": 3,
+        "multiplier": 862
+    },
+    "ZO14": {
+        "name": "engine_coolant_temp",
+        "description": "Engine Coolant Temperature (°F)",
+        "dbtype": "int"
+    },
+    "ZH1": {
+        "name": "cargo_weight",
+        "description": "Cargo Weight (N)",
+        "dbtype": "float",
+        "multiplier": 17792
+    },
+    "ZH2": {
+        "name": "fuel_rate",
+        "description": "Fuel Rate (L/s)",
+        "dbtype": "float",
+        "multiplier": 16428,
+        "decimals": 6
+    },
+    "ZH3": {
+        "name": "engine_speed",
+        "description": "Engine Speed (RPM)",
+        "dbtype": "float",
+        "decimals": 2,
+        "multiplier": 25
+    },
+    "ZL1": {
+        "name": "fuel_used_gas",
+        "description": "Total fuel used (Natural Gas) (kg)",
+        "dbtype": "float",
+        "decimals": 1,
+        "multiplier": 5
+    },
+    "ZL2": {
+        "name": "distance_traveled",
+        "description": "Total vehicle distance (km)",
+        "dbtype": "float",
+        "decimals": 3,
+        "multiplier": 161
+    },
+    "ZL3": {
+        "name": "vehicle_operate_hrs",
+        "description": "Total Vehicle Hours",
+        "dbtype": "float",
+        "decimals": 2,
+        "multiplier": 5
+    },
+    "ZL4": {
+        "name": "engine_operate_hrs",
+        "description": "Engine total hours of operation",
+        "dbtype": "float",
+        "decimals": 2,
+        "multiplier": 5
+    }
+}
